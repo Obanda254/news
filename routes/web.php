@@ -14,3 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/home', function (){
+    return 'This is my home';
+});
+
+Route::get('/user/{id}/{name?}', function ($id, $name="Oboy") {
+    return 'Your id is ' .$id. ' and your name is '.$name;
+})->where('id', '[0-9]+');
+
+Route::get('/about', ['uses'=>'AboutController@about', 'as'=>'about']);
+Route::view('/contact', 'contact');
