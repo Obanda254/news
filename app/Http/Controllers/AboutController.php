@@ -10,6 +10,6 @@ class AboutController extends Controller
     {
         $first_name = 'Ariana';
         $last_name = 'Grande';
-        return view('about', compact('first_name','last_name'));
+        return view('front.layout.master', compact('first_name','last_name'));
     }
 }
