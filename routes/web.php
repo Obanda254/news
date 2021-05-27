@@ -12,6 +12,8 @@
 */
 
 Route::get('/', 'HomePageController@index');
+Route::get('/listing', 'ListingPageController@index');
+Route::get('/details', 'DetailsPageController@index');
 
 Route::get('/home', function (){
     return 'This is my home';
